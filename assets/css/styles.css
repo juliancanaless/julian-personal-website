@@ -127,12 +127,11 @@ a { text-underline-offset: 2px; text-decoration-thickness: 1px; }
   font-size: clamp(1.25rem, 3.2vw, 1.75rem); /* responsive size */
   letter-spacing: 0.02em;
   text-decoration: none;
+  color: var(--text-strong, #111);
   display: inline-flex;
   align-items: center;
-  background: #111;
-  color: #fff;
-  padding: .35rem .55rem;
-  border-radius: .6rem;
+  padding: .375rem .6rem;      /* bigger click/tap target */
+  border-radius: .75rem;
 }
 .logo:hover,
 .logo:focus-visible{
