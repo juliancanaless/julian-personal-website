@@ -127,7 +127,7 @@ a { text-underline-offset: 2px; text-decoration-thickness: 1px; }
   font-size: clamp(1.25rem, 3.2vw, 1.75rem); /* responsive size */
   letter-spacing: 0.02em;
   text-decoration: none;
-  color: var(--text-strong, #111);
+  color: var(--text-strong);
   display: inline-flex;
   align-items: center;
   padding: .375rem .6rem;      /* bigger click/tap target */
