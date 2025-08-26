@@ -745,3 +745,49 @@ input:focus, select:focus, textarea:focus {
    15) Footer
    ========================================================= */
 .site-footer{ padding-block: 2rem; color: var(--muted); }
+
+/* mobile fixes */
+
+/* =========================================================
+   FIX 1) Hero: center the CTAs on mobile
+   ========================================================= */
+@media (max-width: 768px){
+  /* When the hero stacks, center the button row too */
+  .hero .cta{ justify-content: center; }
+}
+
+/* =========================================================
+   FIX 2) Experience: tidy logos & keep a clean 3-col header on phones
+   ========================================================= */
+
+/* Make both real logos and the "LZ" placeholder consistent squares */
+.exp-logo,
+.exp-logo.placeholder{
+  width: 40px;
+  height: 40px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;                /* prevents squish/stretch for Avathon/UTCS */
+  background: #fff;                   /* gives contrast on dark */
+  padding: .25rem;
+  border-radius: .4rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,.25);
+}
+
+/* Phone layout: keep logo | title | chevron on one row
+   (the previous 1fr/auto grid was causing odd wrapping/spacing) */
+@media (max-width: 640px){
+  .exp-summary{
+    grid-template-columns: auto 1fr auto; /* ← keep 3 columns on mobile */
+    align-items: center;
+    gap: .75rem;
+    padding: var(--space);                /* slightly tighter padding on phones */
+  }
+  .exp-logo,
+  .exp-logo.placeholder{
+    width: 36px;                          /* slightly smaller looks nicer on small screens */
+    height: 36px;
+  }
+  .exp-title{ min-width: 0; }             /* prevents overflow/wrapping glitches */
+  .job-title{ font-size: 1rem; }
+  .job-meta { font-size: .9rem; }
+}
