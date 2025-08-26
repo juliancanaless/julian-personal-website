@@ -120,7 +120,25 @@ a { text-underline-offset: 2px; text-decoration-thickness: 1px; }
   position: relative;
   display:flex; align-items:center; justify-content:space-between; gap: var(--space);
 }
-.logo{ font-weight:700; text-decoration:none; color:var(--text); font-size:1.125rem; }
+
+/* Header logo link */
+.logo{
+  font-weight: 800;
+  font-size: clamp(1.25rem, 3.2vw, 1.75rem); /* responsive size */
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  padding: .35rem .55rem;
+  border-radius: .6rem;
+}
+.logo:hover,
+.logo:focus-visible{
+  background: color-mix(in oklab, currentColor 10%, transparent);
+  outline: none;
+}
 
 .nav-toggle{
   display:none;
